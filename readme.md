@@ -1,6 +1,8 @@
 Install commands:
 
 ```bash
+# This rely on gnu mv (--backup=numbered). So alias mv=gmv on mac
+
 # Backup existing ~/.config/tmux if it exists, using numbered backups (~1, ~2, etc.)
 [ -d ~/.config/tmux ] && mv --backup=numbered ~/.config/tmux ~/.config/tmux_backup
 
@@ -18,12 +20,34 @@ git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux
 ```
 
+Now we need to setup tmux-sessionizer: 
+ 
+```bash
+
+[ -d ~/.config/tmux ] && mv --backup=numbered ~/.config/tmux-sessionizer ~/.config/tmux-sessionizer_backup
+
+git clone https://github.com/PoutineSyropErable/config_tmux-sessionizer ~/.config/tmux-sessionizer
+
+# And now the local executable
+
+[ -d ~/.local/tmux-sessionizer ] && mv --backup=numbered ~/.local/tmux-sessionizer ~/.local/tmux-sessionizer_backup
+git clone https://github.com/PoutineSyropErable/tmux-sessionizer --depth=1 ~/.local/tmux-sessionizer
+
+
+
+```
+
 then:
 
 ```bash
 tmux source-file ~/.tmux.conf  # reloads the config with <prefix>, r
 tmux run-shell ~/.tmux/plugins/tpm/tpm
 
+# The way it works. You do prefix, then wait, then command key. 
+# Prefix is Ctrl+b by default. Mine is Ctrl+s. You do both at once. 
+# It's like a game combo. A+B then Y. 
+# Ctrl+s then h. (To create an horizontal split)
+# r is to reload, I is to install stuff
 
 # or press
 # C-b, r  ..... <C-b> is the default prefix. (Control + b)
