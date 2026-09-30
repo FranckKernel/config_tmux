@@ -32,6 +32,8 @@ git clone https://github.com/PoutineSyropErable/config_tmux-sessionizer ~/.confi
 
 [ -d ~/.local/tmux-sessionizer ] && mv --backup=numbered ~/.local/tmux-sessionizer ~/.local/tmux-sessionizer_backup
 git clone https://github.com/PoutineSyropErable/tmux-sessionizer --depth=1 ~/.local/tmux-sessionizer
+ln -s ~/.local/tmux-sessionizer ~/.local/tmux-sessionizer-local
+
 
 
 
