@@ -27,6 +27,7 @@ Now we need to setup tmux-sessionizer:
 [ -d ~/.config/tmux ] && mv --backup=numbered ~/.config/tmux-sessionizer ~/.config/tmux-sessionizer_backup
 
 git clone https://github.com/PoutineSyropErable/config_tmux-sessionizer ~/.config/tmux-sessionizer
+ln -s ~/.config/tmux-sessionizer ~/.config/tmux-sessionizer-config
 
 # And now the local executable
 
