@@ -7,7 +7,7 @@ Install commands:
 [ -d ~/.config/tmux ] && mv --backup=numbered ~/.config/tmux ~/.config/tmux_backup
 
 # Clone the repository if ~/.config/tmux does not exist
-git clone https://github.com/PoutineSyropErable/config_tmux ~/.config/tmux
+git clone https://github.com/FranckKernel/config_tmux ~/.config/tmux
 
 # Backup existing ~/.tmux.conf if it exists, using numbered backups
 [ -f ~/.tmux.conf ] && mv --backup=numbered ~/.tmux.conf ~/.tmux.conf.bak
@@ -26,13 +26,13 @@ Now we need to setup tmux-sessionizer:
 
 [ -d ~/.config/tmux ] && mv --backup=numbered ~/.config/tmux-sessionizer ~/.config/tmux-sessionizer_backup
 
-git clone https://github.com/PoutineSyropErable/config_tmux-sessionizer ~/.config/tmux-sessionizer
+git clone https://github.com/FranckKernel/config_tmux-sessionizer ~/.config/tmux-sessionizer
 ln -s ~/.config/tmux-sessionizer ~/.config/tmux-sessionizer-config
 
 # And now the local executable
 
 [ -d ~/.local/tmux-sessionizer ] && mv --backup=numbered ~/.local/tmux-sessionizer ~/.local/tmux-sessionizer_backup
-git clone https://github.com/PoutineSyropErable/tmux-sessionizer --depth=1 ~/.local/tmux-sessionizer
+git clone https://github.com/FranckKernel/tmux-sessionizer --depth=1 ~/.local/tmux-sessionizer
 ln -s ~/.local/tmux-sessionizer ~/.local/tmux-sessionizer-local
 
 
